@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <header>
-      <h1>Gestión de productos</h1>
+      <div class="mb-5">
+       <h1>Gestión de productos</h1>
+     </div>
+
     </header>
     <main>
       <div v-if="message" :class="messageClass" role="alert">
@@ -71,17 +74,19 @@ export default {
       this.editingProduct = true;
     },
     async deleteProduct(productId) {
-      try {
-        await this.removeProduct(productId);
-        this.message = 'Producto eliminado correctamente';
-        this.messageClass = 'alert alert-success';
-        await this.fetchProducts();
-      } catch (error) {
-        this.message = 'No se pudo eliminar el producto';
-        this.messageClass = 'alert alert-danger';
-        console.error('Error al eliminar producto:', error);
-      }
-    },
+  try {
+    await this.removeProduct(productId);
+    this.message = 'Producto eliminado correctamente';
+    this.messageClass = 'alert alert-success';
+    // Comentar esta línea temporalmente para depuración
+    // await this.fetchProducts();
+  } catch (error) {
+    this.message = 'No se pudo eliminar el producto';
+    this.messageClass = 'alert alert-danger';
+    console.error('Error al eliminar producto:', error);
+  }
+},
+
     resetForm() {
       this.newProduct = {
         nombre: '',

@@ -11,7 +11,7 @@
         <label for="password" class="form-label">Contraseña</label>
         <input type="password" id="password" v-model="password" class="form-control" placeholder="Ingrese su contraseña" required />
       </div>
-      <FormButton :text="textButton" :type="button" class="btn btn-primary w-100 m-2 p-2"/>
+      <FormButton :text="textButton" :type="button" class="w-100 m-2 p-2"/>
     </form>
   </div>  
 </template>
@@ -50,5 +50,8 @@ export default {
 </script>
 
 <style scoped>
-
+button{
+  background-color: #30A7AE;
+  color: white
+}
 </style>

@@ -26,7 +26,7 @@ const routes = [
       if (store.getters['auth/isAdmin']) {
         next();
       } else {
-        next('/');
+        next('/login');
       }
     }
   },

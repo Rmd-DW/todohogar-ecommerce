@@ -26,7 +26,9 @@ const mutations = {
   },
   removeProduct(state, productId) {
     state.products = state.products.filter(product => product.id !== productId);
+    console.log('Estado de productos después de eliminar:', state.products);
   },
+  
   decrementProductStock(state, productId) {
     const productSelected = state.products.find(item => item.id === productId);
     if (productSelected && productSelected.stock > 0) {

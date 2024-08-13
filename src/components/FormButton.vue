@@ -1,8 +1,6 @@
 <template>
-    <button :class="['btn m-2', type]" type="submit">{{ text }}</button>
+  <button :class="['btn', type, 'm-2']" type="submit">{{ text }}</button>
 </template>
-
-
 
 <script>
 export default {
@@ -19,3 +17,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+button{
+  background-color: #30A7AE;
+  color: white;
+}
+</style>

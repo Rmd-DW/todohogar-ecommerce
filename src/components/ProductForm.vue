@@ -28,7 +28,7 @@
       <label for="descripcion">Descripción</label>
       <textarea id="descripcion" v-model="localProduct.descripcion" required class="form-control"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary m-2">{{ editing ? 'Actualizar' : 'Agregar' }}</button>
+    <button type="submit" class="btn m-2">{{ editing ? 'Actualizar' : 'Agregar' }}</button>
   </form>
 </template>
 
@@ -67,4 +67,8 @@ export default {
 </script>
 
 <style scoped>
+button{
+  background-color: #30A7AE;
+  color: white
+}
 </style>
